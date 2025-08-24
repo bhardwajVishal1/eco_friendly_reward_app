@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Reward App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/eco-reward-app/manifest.json">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico"><!-- in <head> -->
+<link rel="manifest" href="/app.webmanifest">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+<meta name="theme-color" content="#4CAF50">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🌍 Eco Reward</h1>
+      <p>Do eco-friendly actions & earn rewards!</p>
+    </header>
+
+    <main>
+      <div class="points-card">
+        <h2>Your Points</h2>
+        <div class="points-display" id="points">0</div>
+      </div>
+
+      <div class="actions">
+        <button onclick="addPoints(10)">♻️ Recycled Waste <span>+10</span></button>
+        <button onclick="addPoints(20)">🚲 Used Bicycle <span>+20</span></button>
+        <button onclick="addPoints(15)">🌳 Planted a Tree <span>+15</span></button>
+        <button class="redeem" onclick="redeemPoints()">🎁 Redeem Reward</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Made with 💚 for a greener planet</p>
+    </footer>
+  </div>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
+</script>
+
+  <script src="app.js"></script>
+</body>
+</html>
