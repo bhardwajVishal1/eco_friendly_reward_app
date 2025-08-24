@@ -1,20 +1,11 @@
 {
-  "name": "greenloop-mobile",
-  "version": "0.2.0",
-  "private": true,
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "eco-reward-app",
+  "version": "1.0.0",
+  "description": "Eco Friendly Reward Web App",
+  "main": "app.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "start": "live-server"
   },
-  "dependencies": {
-    "expo": "~48.0.18",
-    "expo-status-bar": "~1.4.4",
-    "react": "18.1.0",
-    "react-native": "0.70.5",
-    "expo-barcode-scanner": "~12.3.1",
-    "expo-image-picker": "~14.1.2"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
